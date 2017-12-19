@@ -1,0 +1,12 @@
+.tab-list {
+  display: flex;
+  width: 100%;
+  li {
+    flex-grow: 1;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
