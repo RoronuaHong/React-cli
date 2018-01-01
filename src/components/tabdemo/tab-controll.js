@@ -1,6 +1,6 @@
 import React from "react";
 
-class TabsControl extends React.Component{
+class TabControl extends React.Component {
     constructor() {
         super();
 
@@ -18,17 +18,18 @@ class TabsControl extends React.Component{
     }
 
     render() {
-        return(
+        return (
             <div>
                 <div className="tab_title_wrap">
                     {
-                        React.Children.map( this.props.children , (element, index) => {
+                        React.Children.map(this.props.children, (element, index) => {
                             return(
                                 <div
                                     onClick={() => {
                                         this.setState({
-                                            currentIndex : index
-                                        })
+                                            currentIndex: index
+                                        });
+                                        console.log(index);
                                     }}
                                     className={
                                         this.check_title_index(index)
@@ -42,8 +43,8 @@ class TabsControl extends React.Component{
                 </div>
                 <div className="tab_item_wrap">
                     {
-                        React.Children.map(this.props.children,(element, index)=>{
-                            return(
+                        React.Children.map(this.props.children, (element, index) => {
+                            return (
                                 <div
                                     className={
                                         this.check_item_index(index)
@@ -60,4 +61,4 @@ class TabsControl extends React.Component{
     }
 }
 
-export default TabsControl;
+export default TabControl;

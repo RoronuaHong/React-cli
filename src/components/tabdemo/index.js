@@ -2,22 +2,25 @@ import React from "react";
 import TabControl from "./tab-controll";
 
 import "../../scss/common/reset";
-import "../../scss/tabdemo";
 import "../../scss/style";
 
-class Tabdemo extends React.Component {
+class Tabdemos extends React.Component {
+    constructor() {
+        super();
+    }
+
     render() {
         return (
             <div className="container">
                 <TabControl>
-                    <div name="first">
-                        第一帧
+                    <div name="First">
+                        React的1
                     </div>
-                    <div name="second">
-                        第二帧
+                    <div name="Second">
+                        Tab切换1
                     </div>
-                    <div name="third">
-                        第三帧
+                    <div name="Third">
+                        完成了！1
                     </div>
                 </TabControl>
             </div>
@@ -25,4 +28,4 @@ class Tabdemo extends React.Component {
     }
 }
 
-export default Tabdemo;
+export default Tabdemos;
